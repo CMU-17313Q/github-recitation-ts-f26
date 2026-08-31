@@ -1,9 +1,5 @@
 import type { Request, Response } from "express-serve-static-core";
-
-// fib.ts currently uses a CommonJS export.
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const fibonacci = require("./fib") as (n: number) => number;
-
+import fibonacci from "./fib";
 // Endpoint for querying the fibonacci numbers
 export default (
   req: Request<{ num: string }>,
